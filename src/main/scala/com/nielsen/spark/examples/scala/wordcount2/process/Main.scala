@@ -10,7 +10,7 @@ object Main extends Logging {
   def main(args: Array[String]) {
     logInfo("Wordcount Started")
 
-    val spark:SparkSession = init()
+    val spark: SparkSession = init()
 
     process(spark.sparkContext, args(0), args(1))
 

@@ -19,7 +19,7 @@ class ProcessorTest extends FunSuite with BeforeAndAfter {
 
     assert(input_array.length === output_array.length)
 
-    val expected_array:Array[String] = Array("(this,4)", "(is,4)", "(a,4)", "(test,4)")
+    val expected_array: Array[String] = Array("(this,4)", "(is,4)", "(a,4)", "(test,4)")
 
     assert(expected_array === output_array)
   }
