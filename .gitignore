@@ -1,8 +1,11 @@
+#IntelliJ
+.idea
+*.iml
+
+#log files
 *.log
 
-/.idea
-/target
-/tmp
-/spark-hive
-
-spark-scala-wordcount2.iml
+#Project files
+target
+tmp
+spark-hive
