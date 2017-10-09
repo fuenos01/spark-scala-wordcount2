@@ -1,0 +1,8 @@
+*.log
+
+/.idea
+/target
+/tmp
+/spark-hive
+
+spark-scala-wordcount2.iml
