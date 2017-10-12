@@ -1,11 +1,47 @@
-#IntelliJ files
-.idea
+*#*#
+*.#*
 *.iml
-
-#log files
+*.ipr
+*.iws
+*.pyc
+*.pyo
+*.swp
 *.log
+*~
+.DS_Store
+.cache
+.classpath
+.generated-mima*
+.idea/
+.idea_modules/
+.project
+.scala_dependencies
+.settings
 
-#Project files
-target
-tmp
-spark-hive
+/lib/
+
+build/*.jar
+build/apache-maven*
+build/scala*
+cache
+checkpoint
+
+target/
+tmp/
+dist/
+log/
+logs/
+out/
+
+reports/
+scalastyle-on-compile.generated.xml
+scalastyle-output.xml
+scalastyle.txt
+
+TempStatsStore/
+metastore/
+metastore_db/
+warehouse/
+spark-warehouse/
+spark-hive/
+derby.log
