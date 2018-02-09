@@ -1,2 +1,2 @@
 # spark-scala-wordcount2
-Wordcount example using Spark with Scala
+Simple WordCount example using Spark with Scala, and demo for unit testing with spark 
