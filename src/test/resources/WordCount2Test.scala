@@ -1,4 +1,4 @@
-package com.nielsen.spark.examples.scala.wordcount2.process
+package com.nielsen.spark.examples.scala.core
 
 import com.holdenkarau.spark.testing.{RDDComparisons, SharedSparkContext}
 import org.apache.spark.rdd.RDD
@@ -6,7 +6,7 @@ import org.scalatest.FunSuite
 
 import scala.util.matching.Regex
 
-class ProcessorSimpleTest extends FunSuite with SharedSparkContext with RDDComparisons {
+class WordCount2Test extends FunSuite with SharedSparkContext with RDDComparisons {
 
   test("test extract function") {
     val input_file: String = "src/test/resources/data/data.txt"
@@ -51,7 +51,7 @@ class ProcessorSimpleTest extends FunSuite with SharedSparkContext with RDDCompa
     assertRDDEquals(expected_rdd, actual_rdd)
   }
 
-  test("test process function 1") {
+  test("test run function 1") {
     val input_file = "src/test/resources/data/data.txt"
     val output_dir = "tmp/output"
 
@@ -68,7 +68,7 @@ class ProcessorSimpleTest extends FunSuite with SharedSparkContext with RDDCompa
     assertRDDEquals(expected_rdd, output_rdd)
   }
 
-  test("test process function 2") {
+  test("test run function 2") {
     val input_file = "src/test/resources/data/data.txt"
     val output_dir = "tmp/output"
 
