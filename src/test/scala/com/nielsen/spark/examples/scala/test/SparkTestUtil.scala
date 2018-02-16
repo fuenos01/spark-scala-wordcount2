@@ -7,6 +7,7 @@ object SparkTestUtil {
   def initTestEnv() {
     val userDir: String = System.getProperty("user.dir").replace('\\', '/')
     val tmpDir: String = s"file:///$userDir/tmp"
+
     val sparkHiveWarehouseDir: String = s"file:///$userDir/tmp/spark-hive"
     val log4jFile: String = s"file:///$userDir/conf/log4j.properties"
 
