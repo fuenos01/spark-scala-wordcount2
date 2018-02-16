@@ -5,18 +5,19 @@ import org.apache.hadoop.fs.{FileSystem, Path}
 
 object SparkTestUtil {
   def initTestEnv() {
-    val user_dir = System.getProperty("user.dir").replace('\\', '/')
-    val spark_hive_warehouse_dir = "file:///" + user_dir + "/spark-hive"
-    val log4j_file = "file:///" + user_dir + "/conf/log4j.properties"
+    val userDir: String = System.getProperty("user.dir").replace('\\', '/')
+    val tmpDir: String = s"file:///$userDir/tmp"
+    val sparkHiveWarehouseDir: String = s"file:///$userDir/tmp/spark-hive"
+    val log4jFile: String = s"file:///$userDir/conf/log4j.properties"
 
-    sys.props.put("hive.exec.scratchdir", user_dir + "/tmp")
-    sys.props.put("spark.sql.warehouse.dir", spark_hive_warehouse_dir)
-    sys.props.put("spark.local.dir", user_dir + "/tmp/spark/scratch")
+    sys.props.put("hive.exec.scratchdir", s"$userDir/tmp")
+    sys.props.put("spark.sql.warehouse.dir", sparkHiveWarehouseDir)
+    sys.props.put("spark.local.dir", s"$userDir/tmp/spark/scratch")
     sys.props.put("spark.master", "local[*]")
 
-    sys.props.put("log4j.configuration", log4j_file)
+    sys.props.put("log4j.configuration", log4jFile)
 
-    deleteDirectory(user_dir + "/tmp")
+    deleteDirectory(s"$userDir/tmp")
   }
 
   def deleteDirectory(path: String) {
