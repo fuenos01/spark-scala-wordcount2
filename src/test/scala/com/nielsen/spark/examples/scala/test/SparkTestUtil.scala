@@ -13,6 +13,7 @@ object SparkTestUtil {
 
     sys.props.put("hive.exec.scratchdir", s"$userDir/tmp")
     sys.props.put("spark.sql.warehouse.dir", sparkHiveWarehouseDir)
+
     sys.props.put("spark.local.dir", s"$userDir/tmp/spark/scratch")
     sys.props.put("spark.master", "local[*]")
 
